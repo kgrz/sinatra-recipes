@@ -46,32 +46,79 @@
 
 
       <section id="main_content">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h2>Sinatra Recipes </h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Community contributed recipes and techniques for the <a href="http://www.sinatrarb.com/">Sinatra Web
+Framework</a>.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h2>Why yet another doc project?</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Quite simply, the Sinatra README and Book have become long in the tooth.</p>
 
-<h3>Designer Templates</h3>
+<p>This project is to extract any redundant and overlap between the two sources,
+and create a home for user contributed recipes and documentation to take form.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>How can I help?</h2>
 
-<h3>Rather Drive Stick?</h3>
+<p>Got a recipe or tutorial for <a href="http://www.sinatrarb.com/">Sinatra</a>? Awesome, this is
+the first place you should go if you're looking to contribute.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Once you have <a href="http://help.github.com/forking/">forked the project</a> send a <a href="http://help.github.com/pull-requests/">pull
+request</a>, just be sure to follow the <a href="http://github.com/sinatra/sinatra-recipes/wiki/Style-Guidelines">styling
+guidelines</a>. </p>
 
-<h3>Authors and Contributors</h3>
+<p>You can also get a hold of us on <a>irc</a> or the <a href="http://groups.google.com/group/sinatrarb">mailinglist</a>.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Don't have any ideas? Check out the existing <a href="https://github.com/sinatra/sinatra-recipes/issues">issue tracker</a> for
+recipes that have been requested or are in progress.</p>
 
-<h3>Support or Contact</h3>
+<h2>Here's the run down</h2>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>To get started you should clone the repository from github:</p>
+
+<div class="highlight"><pre>git clone git://github.com/sinatra/sinatra-recipes.git
+</pre></div>
+
+<p>Now once you <code>cd</code> into <code>sinatra-recipes</code> you should see a few things.</p>
+
+<p>First you should take note of the application files:</p>
+
+<div class="highlight"><pre>app.rb <span class="c"># a tiny application for displaying the contributed recipes</span>
+config.ru <span class="c"># rackup file for deploying to heroku</span>
+Gemfile <span class="c"># dependencies file for bundler to run the app</span>
+</pre></div>
+
+<p>If you want to run the application yourself first you need the <code>bundler</code> gem.</p>
+
+<div class="highlight"><pre>gem install bundler
+</pre></div>
+
+<p>If you are on Rubinius make sure that you have the latest bundler version
+installed. Versions prior to 1.0.10 won't work.</p>
+
+<div class="highlight"><pre><span class="c"># then install the application dependencies</span>
+bundle install
+</pre></div>
+
+<p>Once that is complete, you should only need to run <code>rackup</code> in the application
+root and visit: <a href="http://localhost:9292">localhost:9292</a></p>
+
+<p>Since the application just maps the flat files, you can browse either the
+source or the web app to view recipes.</p>
+
+<p>If you check out the source you will see a few folders listed, in each folder
+there is a <code>README.md</code> that will briefly explain the topic. This can also be
+view by going to <code>/p/:topic</code> where <code>topic</code> is the folder you wish to view.</p>
+
+<p>In each folder there should be a number of recipes pertaining to each topic.</p>
+
+<h2>On translations</h2>
+
+<p>Currently we're not supporting translations in the main repository.</p>
+
+<p>However, if you'd like to maintain a fork for translating the docs then feel
+free to do so, and add your fork to the <a href="http://github.com/sinatra/sinatra-recipes/wiki/Translations">list of translations in the
+wiki</a>.</p>
       </section>
 
       <footer>
